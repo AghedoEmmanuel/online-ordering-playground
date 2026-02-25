@@ -15,6 +15,8 @@ const pyodide = await loadPyodide({
   stderr: (s) => write(s),
 });
 
+pyodide.globals.set('ask',(question)=>prompt(question)??"")
+
 write("Ready.\n");
 
 runBtn.addEventListener("click", async () => {

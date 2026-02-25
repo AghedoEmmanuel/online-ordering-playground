@@ -69,3 +69,52 @@ Tasks:
 No ordering logic is implemented at this stage.
 
 ---
+
+### Stage 1 – Core Ordering Logic (Python Only)
+
+- Define menu data structure
+- Accept user selections
+- Calculate totals
+- Display receipt logic
+- Implement conditional discounts
+
+---
+
+### Stage 2 – Browser Code Editor Integration
+
+- Integrate Monaco or CodeMirror editor
+- Add Run button
+- Connect editor content to Pyodide runtime
+- Display execution output panel
+
+---
+
+### Stage 3 – UX Improvements
+
+- Improve layout and styling
+- Add error handling
+- Improve output formatting
+- Add input simulation
+
+---
+
+## 🛠 Tech Stack
+
+- HTML / CSS
+- JavaScript (ES Modules)
+- Pyodide (Python WebAssembly runtime)
+- Monaco Editor (planned)
+
+---
+
+## 📚 Learning Objectives
+
+This project explores:
+
+- Running Python entirely in the browser
+- WebAssembly integration
+- JavaScript ↔ Python interoperability
+- Building browser-based developer tools
+- Structuring a staged software project
+
+---

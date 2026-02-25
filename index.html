@@ -12,7 +12,50 @@
 
       <section class="panel">
         <h2>Code</h2>
-        <textarea id="code" spellcheck="false">print("Pyodide is working ✅")</textarea>
+      <textarea id="code" spellcheck="false">
+        #step1: core ordering logic
+         menu={
+        "burger": 5.99,
+        "pizza": 8.49,
+        "fries": 2.99,
+        "salad": 4.49,
+        "drink": 1.99
+       }
+        order = [] 
+
+        print("Welcome to the online ordering playground!")
+        print("\nMenu")
+        print(""_"*25)
+
+        for item, price in menu.items():
+            print(f"{item.title():<10} £{price:.2f}")
+        print(""_"*25)
+
+        while True:
+            choice = ask('Enter the item (or type "done"):').strip.lower()
+
+            if choice == "done":
+                break
+            if choice in menu:
+                order.append((choice, menu[choice]))
+                print(f"Added {choice.title()} (£{menu[choice]:.2f})")
+            else:
+                print("Sorry, we don't have that item. Please choose from the menu.")
+
+            if not order:
+                print('\nNo items ordered.')
+            else:
+                total = sum(price for _, price in order)
+
+                print("\nRECEIPT")
+                print("-" * 25)
+
+                for item, price in order:
+                    print(f"{item.title():<10} £{price:.2f}")
+
+                print("-" * 25)
+                print(f"Subtotal: £{total:.2f}")
+      </textarea>      
         <button id="run">Run</button>
       </section>
 
